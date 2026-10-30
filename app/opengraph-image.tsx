@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { ImageResponse } from "next/og";
 export const runtime = "nodejs";
 export const alt = "EVO Group — The Next Evolution of Business";

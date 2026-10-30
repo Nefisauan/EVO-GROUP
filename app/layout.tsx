@@ -3,7 +3,7 @@ import { SiteHeader, SiteFooter } from "@/components/site";
 import "./globals.css";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
-  metadataBase: new URL(origin),
+  metadataBase: new URL(new URL(origin).origin),
   title: {
     default: "EVO Group — The Next Evolution of Business",
     template: "%s | EVO Group",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "EVO Group",
     title: "The Next Evolution of Business.",
     description: "Strategy. Intelligence. Evolution.",
-    images: ["/opengraph-image"],
+    images: [`${origin.replace(/\/$/, "")}/opengraph-image`],
   },
 };
 export default function RootLayout({

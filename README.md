@@ -48,3 +48,15 @@ npm run build
 ```
 
 Reduced-motion visitors receive a stationary sculpture and no scroll/hover animation. Devices without WebGL receive a CSS sculpture fallback. The 3D scene is client-loaded, uses procedural lighting, and caps pixel ratio. Keyboard-accessible process tabs, department controls, mobile navigation, skip link, and form status messages are included.
+
+## Public website and automatic deployment
+
+The GitHub Pages website is **https://nefisauan.github.io/EVO-GROUP/**.
+
+Pushing to `main` runs `.github/workflows/pages.yml`: install dependencies, run validation tests, build the static site, and deploy it to GitHub Pages. The repository Pages source must be **GitHub Actions**.
+
+`npm run build:pages` creates the Pages artifact in `out/`. The build runs from an isolated temporary copy, excluding the server-only contact API, and sets the `/EVO-GROUP` base path. The original Next.js server build and API remain available with `npm run build`.
+
+GitHub Pages cannot run the contact API. Until a provider is configured, the public contact page displays an availability notice and disables submission. To enable inquiries, set the repository Actions variable `NEXT_PUBLIC_CONTACT_ENDPOINT` to a public HTTPS form service that accepts JSON requests and allows the website origin through CORS. It must validate submissions and provide abuse protection server-side. Do not use a private webhook or put a secret in a `NEXT_PUBLIC_` variable. A confirmed 2xx response is required for success.
+
+Set `NEXT_PUBLIC_BOOKING_URL` as a repository Actions variable to enable a direct scheduling link. Re-run the publishing workflow after changing either variable.

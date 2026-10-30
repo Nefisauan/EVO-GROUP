@@ -1,7 +1,12 @@
 "use client";
 import { useRef, useState, type FormEvent } from "react";
+import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 export default function ContactForm() {
+  const isStatic = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
+  const endpoint =
+    process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ||
+    (isStatic ? "" : "/api/contact");
   const started = useRef(Date.now());
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">(
     "idle",
@@ -12,12 +17,16 @@ export default function ContactForm() {
     setState("sending");
     const data = Object.fromEntries(new FormData(event.currentTarget));
     try {
-      const result = await fetch("/api/contact", {
+      if (!endpoint)
+        throw new Error(
+          "Online inquiries are not available yet. Your message has not been sent.",
+        );
+      const result = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, startedAt: started.current }),
       });
-      const body = await result.json();
+      const body = await result.json().catch(() => ({}));
       if (!result.ok)
         throw new Error(
           body.error || "We could not send your inquiry. Please try again.",
@@ -59,6 +68,11 @@ export default function ContactForm() {
     );
   return (
     <form onSubmit={submit} className="contact-form">
+      {!endpoint && (
+        <p className="form-error" role="status">
+          Online inquiries are not available yet. Please check back soon.
+        </p>
+      )}
       <div className="form-grid">
         <label>
           Full name <span>*</span>
@@ -155,10 +169,13 @@ export default function ContactForm() {
         <input type="checkbox" required name="consent" value="yes" />
         <span>
           I agree to EVO Group using these details to respond to my inquiry, as
-          described in the <a href="/privacy">Privacy Policy</a>.
+          described in the <Link href="/privacy">Privacy Policy</Link>.
         </span>
       </label>
-      <button className="button primary" disabled={state === "sending"}>
+      <button
+        className="button primary"
+        disabled={state === "sending" || !endpoint}
+      >
         {state === "sending"
           ? "Sending inquiry…"
           : "Let’s Start a Conversation"}
