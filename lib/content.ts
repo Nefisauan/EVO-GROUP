@@ -1,168 +1,218 @@
+export const journey = [
+  {
+    name: "Capture",
+    title: "Give every inquiry a next step.",
+    leak: "An inquiry arrives. Nobody responds.",
+    solution:
+      "Connect website, inbox, and CRM intake. Use AI to understand the request and route it to the right person.",
+    measure: "Inquiry response time",
+    outcome: "Fewer opportunities lost at the first touch.",
+  },
+  {
+    name: "Qualify",
+    title: "Put the right opportunities in focus.",
+    leak: "Promising leads disappear into a crowded inbox.",
+    solution:
+      "Summarize needs, enrich records, and flag potential fit against criteria your team defines—with human review.",
+    measure: "Qualified leads reaching sales",
+    outcome: "More attention on conversations that matter.",
+  },
+  {
+    name: "Follow up",
+    title: "Keep the conversation moving.",
+    leak: "A proposal goes quiet. The follow-up never happens.",
+    solution:
+      "Trigger timely reminders, draft relevant follow-ups, and surface stalled opportunities for your sales team.",
+    measure: "Follow-up completion",
+    outcome: "A more consistent path from interest to decision.",
+  },
+  {
+    name: "Deliver",
+    title: "Turn a sale into a smooth handoff.",
+    leak: "Manual work and missing context slow delivery.",
+    solution:
+      "Connect onboarding, document processing, and internal workflows so information moves with the customer.",
+    measure: "Handoff and processing time",
+    outcome: "Less avoidable work. More capacity to serve.",
+  },
+  {
+    name: "Improve",
+    title: "See what’s working. Improve what isn’t.",
+    leak: "Scattered reports hide friction and missed opportunities.",
+    solution:
+      "Bring pipeline and operational data together, flag exceptions, and review performance against an agreed baseline.",
+    measure: "Conversion and operating cost",
+    outcome: "Better evidence for your next business decision.",
+  },
+];
 export const services = [
   {
-    title: "Business process optimization",
-    short: "Business Analysis & Optimization",
-    tag: "Clarity before complexity",
-    description: "Find the friction. Unlock the potential.",
+    title: "AI strategy & opportunity assessment",
+    short: "AI strategy & roadmap",
+    tag: "Find the business case",
+    description: "Find the leaks. Prioritize the right AI opportunities.",
     problem:
-      "Workarounds, duplicate effort, and disconnected processes make everyday work harder than it needs to be.",
+      "Missed leads, repetitive work, and disconnected information can erode revenue potential and margins. Knowing where to use AI is the first decision.",
     approach:
-      "We map how work actually happens, listen to your team, and identify practical opportunities to simplify it.",
+      "We map your customer journey and operations, assess data readiness, and prioritize opportunities by expected impact, effort, risk, and budget.",
     examples:
-      "Process mapping, approval redesign, and removal of repetitive data entry.",
+      "Revenue-leak mapping, workflow assessments, AI use-case selection, and an implementation roadmap.",
     outcome:
-      "Clearer ownership, more consistent workflows, and a stronger foundation for growth.",
+      "A focused plan tied to business objectives, with assumptions and measures of success made explicit.",
   },
   {
-    title: "AI strategy & implementation",
-    short: "AI Implementation",
-    tag: "Intelligence with intention",
-    description: "Make intelligence part of how you work.",
+    title: "AI implementation & business assistants",
+    short: "AI implementation",
+    tag: "From idea to working system",
+    description: "Build AI into the work your business does every day.",
     problem:
-      "AI offers possibilities, but choosing where it belongs requires a clear understanding of the business.",
+      "AI tools create little value when they sit outside the workflows your team actually uses.",
     approach:
-      "We evaluate use cases, data readiness, and human oversight before designing and testing a focused solution.",
+      "We design, integrate, and test AI assistants around defined tasks, approved knowledge, access controls, and human review.",
     examples:
-      "Internal knowledge assistants, document classification, and assisted inquiry routing.",
+      "Internal knowledge assistants, inquiry triage, document extraction, and first-draft sales or support responses.",
     outcome:
-      "More useful access to information and support for your team’s expertise.",
+      "More useful information, less repetitive preparation, and practical support for your team’s judgment.",
   },
   {
-    title: "Workflow automation",
-    short: "Intelligent Automation",
-    tag: "Less repetition. More possibility.",
-    description: "Give your people their time back.",
+    title: "Sales workflows & revenue recovery",
+    short: "Sales & follow-up systems",
+    tag: "Keep opportunity moving",
+    description: "Close the gaps between an inquiry and a customer.",
     problem:
-      "Manual handoffs and recurring tasks can distract people from work that needs their judgment.",
+      "Slow responses, incomplete CRM records, and inconsistent follow-ups can let interested prospects slip away.",
     approach:
-      "We define reliable triggers, rules, exceptions, and ownership, then build and test the workflow.",
+      "We connect lead intake, qualification, and follow-up workflows. AI supports context and drafting; your team controls commercial decisions.",
     examples:
-      "Document processing, follow-up reminders, and streamlined approval workflows.",
+      "Lead routing, CRM summaries, proposal reminders, dormant-pipeline reviews, and follow-up drafts for approval.",
     outcome:
-      "More consistent execution and less avoidable administrative effort.",
+      "Fewer missed handoffs and a more consistent sales process designed to support conversion and revenue growth.",
   },
   {
-    title: "Systems integration",
-    short: "Strategic Business Transformation",
-    tag: "Connected by design",
-    description: "Turn separate systems into one advantage.",
+    title: "Intelligent automation & integration",
+    short: "Automation & integration",
+    tag: "Protect time and margin",
+    description: "Connect your tools. Remove avoidable work.",
     problem:
-      "When software does not communicate, teams spend time moving and reconciling information.",
+      "Re-entering data, chasing approvals, and switching between disconnected tools consume capacity and can introduce costly errors.",
     approach:
-      "We assess existing tools and connect appropriate systems through supported integrations and APIs.",
+      "We combine reliable automation, supported software integrations, and AI where it adds value. Exceptions and ownership are designed into the workflow.",
     examples:
-      "CRM handoffs, connected intake forms, and synchronized operational records.",
-    outcome: "A more coherent flow of information across the business.",
-  },
-  {
-    title: "Operational reporting & analytics",
-    short: "Reporting & Analytics",
-    tag: "See the whole picture",
-    description: "Better visibility. Better decisions.",
-    problem:
-      "Scattered reporting makes it difficult to understand what is happening and where to focus.",
-    approach:
-      "We agree on meaningful measures, assess data quality, and design reporting around actual decisions.",
-    examples:
-      "Automated internal reporting, operational dashboards, and exception alerts.",
-    outcome: "More accessible information and a shared view of progress.",
-  },
-  {
-    title: "Continuous improvement & support",
-    short: "Continuous Improvement",
-    tag: "Progress is a practice",
-    description: "Build momentum that keeps building.",
-    problem:
-      "Business needs change, and systems need ownership and refinement after launch.",
-    approach:
-      "We agree on a support scope, monitor relevant measures, and prioritize refinements with your team.",
-    examples:
-      "Workflow reviews, adoption support, and iterative system improvements.",
+      "Customer onboarding, invoice intake, document processing, approval routing, and CRM-to-operations handoffs.",
     outcome:
-      "Systems that can adapt alongside the people and business they support.",
+      "Less administrative friction, clearer accountability, and more capacity for work that serves customers.",
+  },
+  {
+    title: "Revenue visibility & performance analytics",
+    short: "Revenue visibility",
+    tag: "Make the gaps visible",
+    description: "Understand where opportunity turns into results.",
+    problem:
+      "When sales and operational data live in separate systems, it is difficult to see where leads stall, work slows, or costs accumulate.",
+    approach:
+      "We agree on a baseline, connect relevant data, and build reporting around decisions your team needs to make.",
+    examples:
+      "Pipeline visibility, response-time reporting, workflow exception alerts, and operating-cost dashboards.",
+    outcome:
+      "Clearer visibility into conversion, bottlenecks, and the evidence needed to prioritize improvements.",
+  },
+  {
+    title: "Team enablement & continuous improvement",
+    short: "Enablement & optimization",
+    tag: "Make progress sustainable",
+    description: "Help your people get value from the systems you build.",
+    problem:
+      "An implementation is only useful if people can use it confidently and someone owns its ongoing performance.",
+    approach:
+      "We provide agreed training, handover documentation, adoption support, and a scoped review of performance and AI output quality.",
+    examples:
+      "Team training, operating guides, pilot evaluation, workflow monitoring, and iterative improvements.",
+    outcome:
+      "Better adoption and systems that can adapt as your business, customers, and requirements change.",
   },
 ];
 export const stages = [
   {
     name: "Discover",
-    text: "First, we listen.",
+    text: "Find where value is slipping away.",
     detail:
-      "Understand your objectives, challenges, workflows, and existing systems. An introductory conversation helps determine whether a scoped, paid operational assessment would be useful.",
+      "Map your lead-to-customer journey, daily operations, and business goals. Identify missed follow-ups, repeated work, and disconnected data. An initial conversation determines whether a scoped, paid assessment is useful.",
   },
   {
-    name: "Analyze",
-    text: "Find the right opportunities.",
+    name: "Prioritize",
+    text: "Build a business case before a system.",
     detail:
-      "Map bottlenecks, assess feasibility, and prioritize opportunities by expected value, effort, risk, and readiness. Together, we develop a practical roadmap and a clear proposal.",
+      "Assess the opportunity, data readiness, cost, and risk. Agree on a baseline and useful measures, then build a prioritized AI roadmap with a clear scope and proposal.",
   },
   {
     name: "Implement",
-    text: "Make progress tangible.",
+    text: "Build it into the way you work.",
     detail:
-      "Design, build, integrate, and test the agreed solution. Work happens with your team, including appropriate review, deployment planning, training, and handover.",
+      "Configure or build the solution, connect your existing tools, and test real scenarios. Include human review, exception handling, privacy considerations, team training, and handover.",
   },
   {
-    name: "Evolve",
-    text: "Keep getting better.",
+    name: "Improve",
+    text: "Measure, learn, and refine.",
     detail:
-      "Review the measures agreed at the start, collect feedback, and refine the system. Ongoing support and optimization are scoped around your needs.",
+      "Review response times, follow-up consistency, conversion, operating effort, and adoption as appropriate. Separate observed results from assumptions and agree on the next refinements.",
   },
 ];
 export const areas = [
   [
-    "Sales & customer relationships",
-    "Connect lead intake to your CRM and make follow-ups easier to manage.",
+    "Sales & revenue",
+    "Connect lead capture, CRM updates, and follow-up reminders so opportunities have a clear next step.",
   ],
   [
-    "Operations & workflows",
-    "Streamline approvals and give handoffs a clear owner.",
+    "Operations & delivery",
+    "Automate handoffs and approvals to reduce avoidable delays after a sale.",
   ],
   [
     "Customer support",
-    "Route inquiries to the right team with context attached.",
+    "Use AI to classify requests and prepare answers grounded in approved information, with escalation to your team.",
   ],
   [
     "Finance & reporting",
-    "Automate recurring reports and reduce manual reconciliation.",
+    "Extract document data for review and make recurring reporting less manual.",
   ],
   [
-    "Administrative processes",
-    "Reduce repetitive data entry and simplify document processing.",
+    "Administration",
+    "Reduce duplicate data entry and route routine documents to the right workflow.",
   ],
   [
-    "Data & decision-making",
-    "Bring relevant operational data into a clearer shared view.",
+    "Data & decisions",
+    "Connect relevant data so your team can see stalled opportunities and operational exceptions.",
   ],
   [
-    "Marketing operations",
-    "Connect campaign tools and simplify recurring workflows.",
+    "Marketing & lead intake",
+    "Route campaign inquiries into a consistent intake and follow-up process.",
   ],
   [
-    "Knowledge & communication",
-    "Make internal knowledge easier to find with appropriately controlled access.",
+    "Internal knowledge",
+    "Help employees find answers in authorized business information, with access controls and source references.",
   ],
 ];
 export const articles = [
   {
     slug: "where-ai-belongs",
-    category: "AI in Business",
-    title: "Before asking what AI can do, ask what your business needs.",
-    description:
-      "A practical starting point for identifying useful AI opportunities.",
-    body: "Start with a recurring business challenge. Understand who encounters it, how often it happens, and what a better outcome would look like. Then assess whether process redesign, an integration, automation, or AI is an appropriate response. A small, carefully evaluated pilot can reveal more than a broad technology rollout.",
+    category: "AI Strategy",
+    title: "Start with a revenue leak. Not another AI subscription.",
+    description: "How to connect an AI opportunity to a real business problem.",
+    body: "An unanswered inquiry, a missed follow-up, or a manual handoff can be a useful starting point. Map what happens today and establish a baseline before selecting a tool. Ask whether the problem needs AI reasoning, a reliable rules-based workflow, a software integration, or a clearer process. Define how the change will be tested and who will own the result. Potential revenue impact should be treated as an assumption to evaluate, not a guaranteed return.",
   },
   {
     slug: "cost-of-disconnected-systems",
-    category: "Operational Efficiency",
-    title: "The quiet friction of disconnected systems.",
-    description: "Why the spaces between your tools deserve a closer look.",
-    body: "The friction between systems often appears as repeated data entry, delayed handoffs, or conflicting records. Map the information that moves through one workflow before adding another tool. Identify ownership, exceptions, and a reliable source of truth. A supported integration may help, but a clearer process can be just as valuable.",
+    category: "Revenue Operations",
+    title: "The space between your systems is where opportunity gets lost.",
+    description:
+      "Follow one lead from first contact to delivery—and look for the gaps.",
+    body: "A lead arrives in one inbox, the conversation lives in another tool, and the proposal has no scheduled next step. These gaps make it harder for teams to respond consistently. Map the customer journey, name an owner at each handoff, and agree on the information that needs to move. AI can help summarize or classify information; reliable integrations and clear ownership keep the process moving.",
   },
   {
     slug: "automation-with-purpose",
-    category: "Automation",
-    title: "Automate the right work. Keep the human judgment.",
-    description: "A thoughtful framework for deciding what to automate next.",
-    body: "Good candidates for automation tend to be repeatable, well understood, and governed by clear rules. Consider the cost of exceptions and the consequences of errors. Establish a human review path where judgment matters, test realistic cases, and agree on how the workflow will be monitored after launch.",
+    category: "AI Implementation",
+    title: "What to measure after your AI pilot goes live.",
+    description:
+      "A practical view of adoption, quality, effort, and commercial outcomes.",
+    body: "Choose measures that match the workflow you changed. These might include response time, follow-up completion, output accuracy, processing time, and staff adoption. Compare against a useful baseline and account for other changes in the business. If revenue or conversion is a goal, distinguish evidence of improvement from an assumption about causation. Review exceptions and human oversight as carefully as speed.",
   },
 ];

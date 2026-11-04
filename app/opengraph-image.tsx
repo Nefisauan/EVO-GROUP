@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 import { ImageResponse } from "next/og";
 export const runtime = "nodejs";
-export const alt = "EVO Group — The Next Evolution of Business";
+export const alt = "EVO Group — AI Consulting & Implementation";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -14,7 +14,7 @@ export default function Image() {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: 70,
-        background: "linear-gradient(120deg,#080c12,#142844)",
+        background: "linear-gradient(120deg,#080c12,#173e3b)",
         color: "#f5f7fa",
       }}
     >
@@ -29,9 +29,9 @@ export default function Image() {
           letterSpacing: -5,
         }}
       >
-        The next evolution
+        More revenue.
         <br />
-        of business.
+        Fewer leaks. Real AI.
       </div>
       <div
         style={{
@@ -41,7 +41,7 @@ export default function Image() {
           letterSpacing: 4,
         }}
       >
-        STRATEGY. INTELLIGENCE. EVOLUTION.
+        AI CONSULTING & IMPLEMENTATION
       </div>
     </div>,
     size,

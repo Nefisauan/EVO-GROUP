@@ -1,6 +1,7 @@
 "use client";
-import { useRef, useState, type FormEvent } from "react";
+import { useRef, useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
+import { services } from "@/lib/content";
 import { ArrowUpRight, Check } from "lucide-react";
 export default function ContactForm() {
   const isStatic = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
@@ -8,6 +9,14 @@ export default function ContactForm() {
     process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ||
     (isStatic ? "" : "/api/contact");
   const started = useRef(Date.now());
+  const [interest, setInterest] = useState("");
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get(
+      "interest",
+    );
+    if (services.some((service) => service.short === requested))
+      setInterest(requested || "");
+  }, []);
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">(
     "idle",
   );
@@ -120,17 +129,17 @@ export default function ContactForm() {
         </label>
         <label>
           Area of interest <span>*</span>
-          <select name="interest" required defaultValue="">
+          <select
+            name="interest"
+            required
+            value={interest}
+            onChange={(event) => setInterest(event.target.value)}
+          >
             <option value="" disabled>
               Select an area
             </option>
             {[
-              "Business optimization",
-              "AI implementation",
-              "Workflow automation",
-              "Systems integration",
-              "Reporting & analytics",
-              "Continuous improvement",
+              ...services.map((service) => service.short),
               "Let’s explore together",
             ].map((x) => (
               <option key={x}>{x}</option>
@@ -139,14 +148,14 @@ export default function ContactForm() {
         </label>
       </div>
       <label>
-        What would you like to improve? <span>*</span>
+        Where is your business losing time or opportunity? <span>*</span>
         <textarea
           name="challenge"
           required
           minLength={20}
           maxLength={5000}
           rows={5}
-          placeholder="Tell us a little about your business and the challenges you’re facing."
+          placeholder="For example: missed inquiries, inconsistent follow-ups, manual admin, or disconnected business tools."
         />
       </label>
       <label>
@@ -176,9 +185,7 @@ export default function ContactForm() {
         className="button primary"
         disabled={state === "sending" || !endpoint}
       >
-        {state === "sending"
-          ? "Sending inquiry…"
-          : "Let’s Start a Conversation"}
+        {state === "sending" ? "Sending inquiry…" : "Explore My AI Opportunity"}
         <ArrowUpRight size={18} />
       </button>
       {state === "error" && (

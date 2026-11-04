@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "@/components/site";
 import "./globals.css";
+import "./evolution.css";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(new URL(origin).origin),
   title: {
-    default: "EVO Group — The Next Evolution of Business",
+    default: "EVO Group — AI Consulting & Business Implementation",
     template: "%s | EVO Group",
   },
   description:
-    "Business transformation, AI implementation, and intelligent automation. EVO Group helps businesses evolve through strategy, technology, and execution.",
+    "AI consulting and implementation to help businesses capture revenue opportunities, reduce operational leaks, and automate work. Strategy, integration, and hands-on execution.",
   openGraph: {
     type: "website",
     siteName: "EVO Group",
-    title: "The Next Evolution of Business.",
-    description: "Strategy. Intelligence. Evolution.",
+    title: "More revenue. Fewer leaks. Real AI.",
+    description:
+      "AI consulting and implementation, built around your business.",
     images: [`${origin.replace(/\/$/, "")}/opengraph-image`],
   },
 };

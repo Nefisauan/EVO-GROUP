@@ -50,7 +50,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link href="/contact" className="nav-cta">
-          Let’s Talk <ArrowUpRight size={15} />
+          Let’s Talk AI <ArrowUpRight size={15} />
         </Link>
         <button
           className="menu-toggle"
@@ -72,7 +72,11 @@ export function SiteFooter() {
           <Link href="/" aria-label="EVO Group home">
             <Logo />
           </Link>
-          <p>The Next Evolution of Business.</p>
+          <p>
+            AI consulting & implementation.
+            <br />
+            The next evolution of your business.
+          </p>
         </div>
         <div>
           <span className="eyebrow">Explore</span>
@@ -84,10 +88,10 @@ export function SiteFooter() {
         </div>
         <div>
           <span className="eyebrow">Expertise</span>
-          <Link href="/services#service-0">Business optimization</Link>
+          <Link href="/services#service-0">AI strategy & roadmap</Link>
           <Link href="/services#service-1">AI implementation</Link>
-          <Link href="/services#service-2">Intelligent automation</Link>
-          <Link href="/services#service-3">Systems integration</Link>
+          <Link href="/services#service-2">Sales & follow-up systems</Link>
+          <Link href="/services#service-3">Automation & integration</Link>
         </div>
         <div className="footer-contact">
           <span className="eyebrow">A conversation starts change.</span>
@@ -96,12 +100,11 @@ export function SiteFooter() {
             <br />
             what’s next. <ArrowUpRight />
           </Link>
-          <span className="unconfigured">LinkedIn · Coming soon</span>
         </div>
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} EVO Group</span>
-        <span>Strategy. Intelligence. Evolution.</span>
+        <span>AI. Implementation. Business value.</span>
         <div>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Use</Link>
@@ -115,22 +118,24 @@ export function CTA() {
     <section className="cta-section section-shell">
       <div className="eyebrow">
         <i />
-        Your next chapter
+        Your next opportunity
       </div>
       <h2>
-        Your business could be
+        Where is your business
         <br />
-        operating <em>smarter.</em>
+        <em>leaving value behind?</em>
       </h2>
       <p>
-        Let’s discuss how your company operates today,
-        <br className="desktop-break" /> and what opportunities might be worth
-        exploring.
+        Let’s explore where AI could help you capture more opportunity,
+        <br className="desktop-break" /> reduce avoidable work, and build a
+        stronger business.
       </p>
       <Link href="/contact" className="button primary">
-        Schedule a Free Discovery Call <ArrowUpRight size={18} />
+        Book an AI Discovery Call <ArrowUpRight size={18} />
       </Link>
-      <small>An introductory conversation. A clearer starting point.</small>
+      <small>
+        A free introductory conversation. A practical place to start.
+      </small>
     </section>
   );
 }

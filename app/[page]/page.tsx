@@ -65,29 +65,30 @@ export default async function Page({
     return (
       <>
         <Intro
-          label="The EVO perspective"
-          title="Built for"
-          accent="what’s next."
-          copy="Helping businesses evolve through strategic thinking, intelligent technology, and hands-on execution."
+          label="AI consulting. Business understanding. Real implementation."
+          title="AI expertise."
+          accent="Business perspective."
+          copy="EVO Group helps businesses put AI to work: capturing more opportunity, reducing operational leaks, and building smarter ways to operate."
         />
         <section className="section-shell editorial">
           <span className="eyebrow">Our purpose</span>
           <h2>
-            Good technology starts
+            Useful AI starts
             <br />
             with a better <em>understanding.</em>
           </h2>
           <div className="editorial-columns">
             <p>
-              We believe business transformation begins with a clear view of how
-              work happens today. The people, the processes, the tools, and the
-              friction between them.
+              We are an AI consulting and implementation company focused on the
+              way businesses actually work. We look at how leads become
+              customers, how work gets delivered, and where missed handoffs or
+              repeated effort let value slip away.
             </p>
             <p>
-              Our mission is to help businesses evolve by combining strategic
-              thinking, technology, and execution. Our vision is a future where
-              businesses of every size can operate intelligently, adapt faster,
-              and unlock more of their potential.
+              Our mission is to turn AI possibilities into useful business
+              systems. We combine strategy, implementation, integration, and
+              team enablement so businesses of different sizes can pursue growth
+              with clearer processes and better information.
             </p>
           </div>
         </section>
@@ -123,19 +124,19 @@ export default async function Page({
           ))}
         </section>
         <section className="section-shell founder">
-          <span className="eyebrow">The people behind the progress</span>
+          <span className="eyebrow">What working with EVO means</span>
           <h2>
-            Our founder’s story.
+            A business case.
             <br />
-            <em>Coming into focus.</em>
+            <em>And a path to delivery.</em>
           </h2>
           <p>
-            Founder details and an authentic biography will be shared here. For
-            now, start a conversation about your business and what you’d like to
-            build.
+            Expect clear scoping, practical recommendations, and hands-on
+            implementation. We work with your people and existing tools,
+            document what changes, and agree on how progress will be evaluated.
           </p>
-          <Link href="/contact" className="text-link">
-            Connect with EVO <ArrowUpRight size={16} />
+          <Link href="/approach" className="text-link">
+            See how an engagement works <ArrowUpRight size={16} />
           </Link>
         </section>
         <CTA />
@@ -146,9 +147,9 @@ export default async function Page({
       <>
         <Intro
           label="Our expertise"
-          title="Better systems."
-          accent="Greater possibility."
-          copy="Practical consulting and implementation, built around how your business works—and where you want it to go."
+          title="AI with a purpose."
+          accent="Built into your business."
+          copy="AI consulting, hands-on implementation, and connected workflows designed to support revenue growth, protect capacity, and reduce the gaps that cost your business."
         />
         <div className="service-index section-shell">
           {services.map((s, i) => (
@@ -202,9 +203,9 @@ export default async function Page({
       <>
         <Intro
           label="The EVO method"
-          title="A clear process."
-          accent="Meaningful progress."
-          copy="From the first conversation to a working solution, every step has a purpose. Explore how an engagement can take shape."
+          title="From business problem"
+          accent="to working AI."
+          copy="Find where opportunity is being lost. Build a business case. Implement the right solution. Measure what changes. Our approach connects AI decisions to business priorities."
         />
         <section className="section-shell approach-process">
           <Process />
@@ -249,7 +250,7 @@ export default async function Page({
             ],
             [
               "Define success together",
-              "We agree on relevant objectives and review measures such as workflow time, completion consistency, adoption, and data quality. Scope, deliverables, and responsibilities are documented before implementation.",
+              "We agree on relevant objectives such as inquiry response time, follow-up completion, conversion, processing effort, and output quality. We distinguish observed results from projected impact. Scope, deliverables, and responsibilities are documented before implementation.",
             ],
           ].map(([t, d]) => (
             <div key={t}>
@@ -268,14 +269,14 @@ export default async function Page({
           label="Ideas for what’s next"
           title="A clearer view."
           accent="A smarter next move."
-          copy="Perspectives on business improvement, practical technology, and the possibilities in between."
+          copy="Practical perspectives on AI implementation, revenue leaks, and building a more connected business."
         />
         <section className="section-shell insights-list">
           <div className="insight-categories">
             <span>AI in Business</span>
-            <span>Operational Efficiency</span>
+            <span>Revenue Operations</span>
             <span>Automation</span>
-            <span>Digital Transformation</span>
+            <span>AI Implementation</span>
             <span>Business Strategy</span>
             <span>Technology & Innovation</span>
           </div>
@@ -315,10 +316,10 @@ export default async function Page({
     return (
       <>
         <Intro
-          label="Your next evolution starts here"
-          title="Let’s build"
-          accent="what’s next."
-          copy="Tell us where you are today and where you’d like to go. We’ll explore whether there’s a practical opportunity to work together."
+          label="Let’s find your AI opportunity"
+          title="Where could AI"
+          accent="move your business?"
+          copy="Tell us where leads go quiet, work gets repeated, or disconnected systems slow your team down. Let’s explore a practical place to start."
         />
         <section className="section-shell contact-layout">
           <aside>
@@ -326,19 +327,20 @@ export default async function Page({
             <h2>
               Start with
               <br />
-              possibility.
+              the business.
             </h2>
             <p>
-              An introductory discovery call is a chance to understand your
-              business, hear your challenges, and discuss potential next steps.
+              A free introductory AI discovery call helps us understand your
+              goals, identify possible revenue or operational leaks, and discuss
+              whether a scoped assessment or implementation makes sense.
             </p>
             <div className="contact-expect">
               <span>01</span>
-              <p>Tell us a little about your business.</p>
+              <p>Share the challenge and your business goals.</p>
               <span>02</span>
-              <p>We review your inquiry and explore fit.</p>
+              <p>Explore where AI or automation could help.</p>
               <span>03</span>
-              <p>Agree on a useful next conversation.</p>
+              <p>Discuss a practical next step and scope.</p>
             </div>
             {process.env.NEXT_PUBLIC_BOOKING_URL && (
               <a
